@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>STRANDED 6: FINAL IMMUNITY CHALLENGE</title>
+		<link href="https://fonts.googleapis.com/css2?family=Changa:wght@700&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		/* Create four equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 24%;
+		  padding: 8px;
+		  height: 370px; /* Should be removed. Only for demonstration */
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+		  .column {
+		  	border-style: solid;
+		  	border-color: white;
+		  	border-width: 20px;
+		    width: 100%;
+		  }
+		}
+
+		input[type=text] {
+			height: 50px;
+			width: 60%;
+		    border: 4px solid #8842d5;
+		    border-radius: 5px; 
+		}
+
+		.example_a {
+			color: #fff !important;
+			text-transform: uppercase;
+			text-decoration: none;
+			background: #ed3330;
+			padding: 20px;
+			border-radius: 5px;
+			display: inline-block;
+			border: none;
+			transition: all 0.4s ease 0s;
+		}
+		.example_a:hover {
+			background: #434343;
+			letter-spacing: 1px;
+			-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+			-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+			box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+			transition: all 0.4s ease 0s;
+		}
+		</style>
+	</head>
+	<body background="fic_bg.jpg" style="background-repeat:no-repeat; background-size:cover;" ncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
+		<div class="row">
+			<div class="column" style="background-image: url('S1.jpg');
+									   background-repeat: no-repeat;
+									   background-position: center;
+									   margin-right: 1%;
+									   background-size: 170;
+
+									   border: 2px ;" onclick="clickStation1();">
+			</div>
+			<div class="column" style="background-image: url('S2.jpg');
+									   background-repeat: no-repeat;
+									   background-position: center;
+									   margin-right: 1%;
+									   border-width: 2px;" onclick="clickStation2()">
+			</div>
+			<div class="column" style="background-image: url('S3.jpg');
+									   background-repeat: no-repeat;
+									   background-position: center;
+									   margin-right: 1%;
+									   border-width: 2px;" onclick="clickStation3()">
+			</div>
+			<div class="column" style="background-image: url('S4.jpg');
+									   background-repeat: no-repeat;
+									   background-position: center;
+									   border-width: 2px;" onclick="clickStation4()">
+			</div>
+		</div>
+		<center>	
+		<div class="row" style="margin-top: 5%; padding-bottom: 3%; padding-top: 1%; background: rgba(0, 0, 0, .5); width: 50%;">
+			<center>
+			<p style="font-family: 'Century Gothic', sans-serif; font-size: 50px; color: white">GO TO LINK: </p>
+			<input type="text" id="textBox" style="font-family: Calibri Light; font-size: 30px; text-align: center" readonly="readonly">
+			<a class="example_a" onclick="copyText()" target="_blank" rel="nofollow noopener" style="font-family: 'Changa', sans-serif">Copy</a>
+		</div>
+	</body>
+	<script>
+		function copyText() {
+		  var copyText = document.getElementById("textBox");
+		  copyText.select();
+		  copyText.setSelectionRange(0, 99999)
+		  document.execCommand("copy");
+		}
+	</script>
+	<script type="text/javascript">
+		function clickStation1(){
+			var s1Pass;
+
+			do{
+				s1Pass = prompt("Enter the passcode for Station 1:");
+				console.log(s1Pass);
+				if (s1Pass === null){
+					return;
+				}
+			} while (s1Pass != "I31T640V");
+
+			if (s1Pass == "I31T640V"){
+				document.getElementById("textBox").value = "tinyurl.com/S6-ST1-PRE-<NAME>";
+				console.log(s1Pass);
+			}
+		}
+
+		function clickStation2(){
+			var s2Pass;
+
+			do{
+				s2Pass = prompt("Enter the passcode for Station 2:");
+
+				if (s2Pass === null){
+					return;
+				}
+			} while (s2Pass != "78HC7ZDB");
+
+			if (s2Pass == "78HC7ZDB"){
+				document.getElementById("textBox").value = "tinyurl.com/S6-ST2-PRE-<NAME>";
+				console.log(s2Pass);
+			}
+		}
+
+		function clickStation3(){
+			var s3Pass;
+
+			do{
+				s3Pass = prompt("Enter the passcode for Station 3:");
+
+				if (s3Pass === null){
+					return;
+				}
+			} while (s3Pass != "V5B3S8L1");
+
+			if (s3Pass == "V5B3S8L1"){
+				document.getElementById("textBox").value = "tinyurl.com/S6-ST3-PRETASK";
+				console.log(s3Pass);
+			}
+		}
+
+		function clickStation4(){
+			var s4Pass;
+
+			do{
+				s4Pass = prompt("Enter the passcode for Station 4:");
+
+				if (s4Pass === null){
+					return;
+				}
+			} while (s4Pass != "3I9PO7Y7");
+
+			if (s4Pass == "3I9PO7Y7"){
+				document.getElementById("textBox").value = "tinyurl.com/S6-ST4-PRE-<NAME>";
+				console.log(s4Pass);
+			}
+		}		
+	</script>
+</html>
